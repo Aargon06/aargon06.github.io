@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Molt | Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Modernes Design & Schriftarten */
         :root {
@@ -107,6 +108,44 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
         }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-icons a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            background: #fff;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            background: var(--section-bg);
+        }
+        
+        .social-icons i {
+            font-size: 1.2rem;
+        }
+        
+        /* Spezifische Farben für die Icons beim Hover (optional) */
+        .social-icons a:hover .fa-linkedin { color: #0077b5; }
+        .social-icons a:hover .fa-orcid { color: #a6ce39; }
+        .social-icons a:hover .fa-x-twitter { color: #000000; }
+        .social-icons a:hover .fa-graduation-cap { color: #4285f4; }
     </style>
 </head>
 <body>
@@ -139,8 +178,32 @@
                 at <strong>Kepler Gymnasium Ulm</strong>, introducing students to the world of electronics and programming through hands-on 
                 <strong>Arduino</strong> projects that inspire creativity and problem-solving.    
             </p>
-        </header>
 
+             <!-- Social & Academic Links -->
+            <div class="social-icons">
+                <!-- LinkedIn -->
+                <a href="www.linkedin.com/in/aaron-molt-a08458374" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+        
+                <!-- Google Scholar -->
+                <a href="https://scholar.google.com/citations?user=JUFgo1UAAAAJ&hl=de" target="_blank">
+                    <i class="fas fa-graduation-cap"></i> Scholar
+                </a>
+        
+                <!-- ORCID -->
+                <a href="https://orcid.org/0009-0007-2342-098X" target="_blank">
+                    <i class="fab fa-orcid"></i> ORCID
+                </a>
+        
+                <!-- Twitter / X -->
+                <a href="https://x.com/AaronMolt" target="_blank">
+                    <i class="fab fa-x-twitter"></i> Twitter
+                </a>
+            </div>
+        </header>
+        
+        
         <!-- Publications -->
         <section id="publications">
             <h2>Publications</h2>
