@@ -44,8 +44,11 @@
         nav ul {
             list-style: none;
             display: flex;
+            gap: 20px; /* Eleganter als margin-left */
             margin: 0;
             padding: 0;
+            flex-wrap: wrap; /* Erlaubt Umbruch, falls es zu eng wird */
+            justify-content: center;
         }
 
         nav ul li {
@@ -63,6 +66,26 @@
             color: var(--primary-color);
         }
 
+                
+        /* Responsives Design für die Navigation (Handys) */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column; /* Logo oben, Links darunter */
+                gap: 15px;
+                padding: 1rem;
+            }
+        
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem; /* Etwas kleinere Schrift auf dem Handy */
+            }
+            
+            .btn-cv {
+                padding: 0.4rem 0.8rem; /* Button etwas kompakter */
+            }
+        }
+
+        
         /* Hero / Willkommen */
         .container {
             max-width: 900px;
