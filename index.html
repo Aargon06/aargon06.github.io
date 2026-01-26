@@ -146,6 +146,46 @@
         .social-icons a:hover .fa-orcid { color: #a6ce39; }
         .social-icons a:hover .fa-x-twitter { color: #000000; }
         .social-icons a:hover .fa-graduation-cap { color: #4285f4; }
+
+        /* Container für Bild und Text */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 4rem 0;
+            text-align: left; /* Text linksbündig */
+        }
+        
+        /* Das Bild-Styling */
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%; /* Macht das Bild rund */
+            object-fit: cover; /* Verhindert Verzerrung */
+            border: 4px solid var(--section-bg);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .profile-text {
+            flex: 1;
+        }
+        
+        /* Social Icons linksbündig im Header */
+        .profile-text .social-icons {
+            justify-content: flex-start;
+        }
+        
+        /* Responsives Design für Handys */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-text .social-icons {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -164,42 +204,48 @@
     <div class="container">
         
         <!-- Willkommens-Sektion -->
-        <header id="home">
-            <h1>Welcome, I'm Aaron Molt</h1>
-            <p>
-                I am a Computer Science Master's student at <strong>Ulm University</strong> with a strong passion for software quality and engineering. 
-                Currently, I am working as Research Assistant at the <strong>Institute of Software Engineering and Automotive Informatics</strong> 
-                at the <strong>TU Braunschweig</strong>, where my research focuses on <strong>Quality Assurance of Configurable Systems</strong>. 
-                I explore methods to ensure reliability in complex, highly customizable software, leveraging <strong>knowledge compilation</strong> 
-                as a cornerstone for more advanced analysis and verification techniques.
-            </p>
-            <p>
-                Beyond my research, I am dedicated to technology education. I teach <strong>NWT (Natural Science and Technology)</strong> 
-                at <strong>Kepler Gymnasium Ulm</strong>, introducing students to the world of electronics and programming through hands-on 
-                <strong>Arduino</strong> projects that inspire creativity and problem-solving.    
-            </p>
+        <header id="home" class="profile-header">
+            <div class="profile-image-container">
+                <img src="aaron.jpeg" alt="Aaron Molt" class="profile-pic">
+            </div>
 
-             <!-- Social & Academic Links -->
-            <div class="social-icons">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/aaron-molt-a08458374" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-        
-                <!-- Google Scholar -->
-                <a href="https://scholar.google.com/citations?user=JUFgo1UAAAAJ&hl=de" target="_blank">
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
-        
-                <!-- ORCID -->
-                <a href="https://orcid.org/0009-0007-2342-098X" target="_blank">
-                    <i class="fab fa-orcid"></i>
-                </a>
-        
-                <!-- Twitter / X -->
-                <a href="https://x.com/AaronMolt" target="_blank">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
+            <div class="profile-text">
+                <h1>Welcome, I'm Aaron Molt</h1>
+                <p>
+                    I am a Computer Science Master's student at <strong>Ulm University</strong> with a strong passion for software quality and engineering. 
+                    Currently, I am working as Research Assistant at the <strong>Institute of Software Engineering and Automotive Informatics</strong> 
+                    at the <strong>TU Braunschweig</strong>, where my research focuses on <strong>Quality Assurance of Configurable Systems</strong>. 
+                    I explore methods to ensure reliability in complex, highly customizable software, leveraging <strong>knowledge compilation</strong> 
+                    as a cornerstone for more advanced analysis and verification techniques.
+                </p>
+                <p>
+                    Beyond my research, I am dedicated to technology education. I teach <strong>NWT (Natural Science and Technology)</strong> 
+                    at <strong>Kepler Gymnasium Ulm</strong>, introducing students to the world of electronics and programming through hands-on 
+                    <strong>Arduino</strong> projects that inspire creativity and problem-solving.    
+                </p>
+    
+                 <!-- Social & Academic Links -->
+                <div class="social-icons">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/aaron-molt-a08458374" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+            
+                    <!-- Google Scholar -->
+                    <a href="https://scholar.google.com/citations?user=JUFgo1UAAAAJ&hl=de" target="_blank">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+            
+                    <!-- ORCID -->
+                    <a href="https://orcid.org/0009-0007-2342-098X" target="_blank">
+                        <i class="fab fa-orcid"></i>
+                    </a>
+            
+                    <!-- Twitter / X -->
+                    <a href="https://x.com/AaronMolt" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
             </div>
         </header>
         
